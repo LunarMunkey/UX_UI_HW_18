@@ -1,0 +1,158 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: radial-gradient(121.6% 49.96% at 50% 55.77%, #30C5CB 0%, #310E68 100%);
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
+    font-size: 32px;
+}
+
+.navBar {
+    background-color: #2D2D2D;
+    margin: -8px -8px 0px -8px;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 15%;
+    padding-right: 15%;
+    box-shadow: 0px 5px 5px #2D2D2D;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+li {
+    padding: 0px 20px;
+    color: white;
+}
+
+.logo {
+    display: flex;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.hero {
+    height: 650px;
+    padding: 10px;
+}
+
+.content {
+    width: 1010px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1 {
+    font-size: 96px;
+    color: white;
+    text-shadow: 5px 5px 4px #2D2D2D;
+    margin-bottom: -10px;
+}
+
+h1 span {
+    display: inline-block;
+}
+
+h1 span::first-letter {
+    font-family: 'Arizonia', cursive;
+    margin-right: 10px;
+    font-size: 150px;
+}
+
+h4 {
+    color: #310E68;
+    font-size: 48px;
+    text-shadow: 4px 4px 4px #2D2D2D;
+    margin-top: -10px;
+}
+
+.brackets {
+    font-family: 'Arizonia', cursive;
+    color: #30C5CB;
+    text-shadow: none;
+}
+
+h4 .brackets {
+    color: white;
+    font-size: 64px;
+    margin-top: -100px;
+}
+
+.content p {
+    color: white;
+    font-size: 36px;
+    width: 775px;
+    margin: 20px auto;
+}
+
+.contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-right: 15%;
+    margin-right: -8px;
+}
+
+.icon {
+    padding: 10px 15px;
+}
+
+.sectionHeader {
+    color: white;
+    font-weight: 500;
+    font-size: 64px;
+    margin-bottom: -40px;
+    padding-left: 15%;
+}
+
+.sectionHeader::first-letter {
+    font-family: 'Arizonia', cursive;
+    color: #30C5CB;
+    font-size: 128px;
+}
+
+footer {
+    background-color: #2D2D2D;
+    margin: 0px -8px -8px -8px;
+    text-align: center;
+    color: white;
+    padding-left: 15%;
+    padding-right: 15%;
+    height: 150px;
+}
+
+h5 {
+    font-size: 40px;
+    font-weight: 400;
+    margin: auto;
+    justify-content: flex-start;
+}
+
+h5 .brackets {
+    font-size: 52px;
+}
+
+footer .flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 15px 0px;
+}
+
+footer .contact {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 16px;
+}
+
+#copyright {
+    justify-content: baseline;
+    margin: 0px 0px;
+}
+
