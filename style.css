@@ -1,47 +1,80 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
     background: radial-gradient(121.6% 49.96% at 50% 55.77%, #30C5CB 0%, #310E68 100%);
 }
 
-.flex {
+header {
+
+    position: fixed;
+    width: 100%;
+    
+}
+
+nav {
     display: flex;
-    flex-direction: row;
-    font-size: 32px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    width: 100%;
 }
 
 .navBar {
     background-color: #2D2D2D;
-    margin: -8px -8px 0px -8px;
-    display: flex;
-    justify-content: space-between;
     padding-left: 15%;
     padding-right: 15%;
     box-shadow: 0px 5px 5px #2D2D2D;
 }
 
-ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
+.hamburger {
+    background-color: transparent;
+    display: none;
+    border: 0;
+    color: #FFFFFF;
+    font-size: 50px;
+    cursor: pointer;
 }
 
-li {
+.hamburger:focus {
+    outline: none;
+}
+
+.fa-xmark {
+    display: none;
+}
+
+.navUL {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    list-style-type: none;
+}
+
+.navUL li {
+    display: inline-block;
     padding: 0px 20px;
     color: white;
+    font-size: 32px;
+    cursor: pointer;
 }
 .navItem:hover {
     color: #30C5CB;
 }
 
-.logo {
-    display: flex;
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
-
 .hero {
     height: 650px;
-    padding: 10px;
+    padding-top: 130px;
 }
 
 .content {
@@ -281,14 +314,16 @@ h4 .brackets {
 .skillsList {
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
+    padding: 15px 15px 15px 50px;
 }
 
 .list ul {
     display: flex;
     flex-direction: column;
     font-size: 28px;
+    color: #FFFFFF;
     font-weight: 400;
-    padding-right: 20px;
 }
 
 .tools {
@@ -298,7 +333,7 @@ h4 .brackets {
 
 .toolsList img {
     margin: auto;
-    padding: 30px;
+    padding: 15px;
 }
 
 .tools h5 {
@@ -311,11 +346,10 @@ h4 .brackets {
 
 footer {
     background-color: #2D2D2D;
-    margin: 0px -8px -8px -8px;
     text-align: center;
     color: white;
-    padding-left: 15%;
-    padding-right: 15%;
+    justify-content: center;
+    align-content: center;
     height: 150px;
 }
 
@@ -331,11 +365,12 @@ h5 .brackets {
     font-size: 52px;
 }
 
-footer .flex {
+footer .footer {
     display: flex;
-    flex-direction: row;
+    align-items: center;
     justify-content: center;
     padding: 15px 0px;
+    margin: 0 auto;
 }
 
 footer .contact {
@@ -345,49 +380,177 @@ footer .contact {
     padding-right: 16px;
 }
 
-#copyright {
-    justify-content: baseline;
-    margin: 0px 0px;
-}
+@media screen and (max-width: 767px) {
 
-@media screen and (max-width: 600px) {
-    .flex {
+    header {
+        width: 100%;
+    }
+
+    .hamburger {
+        display: block;
+    }
+    
+    .navUL {
+        display: none;
+        background: transparent;
+        flex-direction: column;
+        width: 100%;
+        transform: translateY(-150%);
+    }
+
+    .showMenu {
+        transform: translateY(0);
         display: flex;
-        flex-direction: row;
+        transition: transform 0.2s;
+    }
+
+    
+
+    /*.navUL.show {
+       display: flex;
+    }*/
+    
+    .navUL li {
+        padding: 10px 20px;
+        color: white;
         font-size: 32px;
     }
-    
-    .navBar {
-        background-color: #2D2D2D;
-        margin: -8px -8px 0px -8px;
+
+    .hero {
         display: flex;
-        justify-content: space-between;
-        padding-left: 15%;
-        padding-right: 15%;
-        box-shadow: 0px 5px 5px #2D2D2D;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        height: 650px;
+        padding-top: 130px;
     }
     
-    ul {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
+    .content {
+        width: 360px;
+        margin: 0 auto;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
     }
     
-    li {
-        padding: 0px 20px;
+    h1 {
+        font-size: 50px;
         color: white;
-    }
-    .navItem:hover {
-        color: #30C5CB;
+        text-shadow: 5px 5px 5px #2D2D2D;
     }
     
-    .logo {
-        display: flex;
-        padding-top: 5px;
-        padding-bottom: 5px;
+    h1 span::first-letter {
+        font-family: 'Arizonia', cursive;
+        margin-right: 10px;
+        font-size: 75px;
     }
+
+    h4 {
+        color: #30C5CB;
+        font-size: 32px;
+        text-shadow: 4px 4px 4px #2D2D2D;
+        margin: 30px;
+    }
+    
+    h4 .brackets {
+        color: white;
+        font-size: 40px;
+        margin-top: -100px;
+    }
+    
+    .content p {
+        color: white;
+        font-size: 20px;
+        font-weight: 500;
+        width: 360px;
+        margin: 20px auto;
+    }
+    
+    .contact {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        padding: 0 20%;
+    }
+    
+    .icon {
+        padding: 15px 15px;
+    }
+
+    .projects {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        width: 360px;
+    }
+
+    .study {
+        color: white;
+        font-weight: 500;
+        font-size: 32px;
+        margin: 10px auto;
+    }
+    
+    .study span {
+        font-size: 40px;
+    }
+    
+    .caseStudy {
+        width: 360px;
+        height: 550px;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto 100px;
+    }
+
+    #caseStudy2 {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    
+    .caseImage {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        width: 360px;
+    }
+
+    .caseText {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: space-evenly;
+        color: white;
+        font-size: 20px;
+        font-weight: 400;
+        width: 330px;
+        margin: 0 auto;
+    }
+    
+    .studyText {
+        width: 340px;
+        margin: 0px auto;
+    }
+
+    #lifelettersImage img{
+        width: 100%;
+    }
+    #mars-laptop{
+        width: 75%;
+    }
+    #mars-mobile{
+        width: 25%;
+        padding-right: 2px;
+    }
+    #travemoteImage img{
+        height: 225px;
+    }
+    
     .about {
-        margin: 0px -8px;
         max-width: 360px;
         margin: 0 auto;
         height: 1000px;
@@ -406,7 +569,7 @@ footer .contact {
     }
     .aboutTop p {
         margin: 10px auto;
-        max-width: 340px;
+        max-width: 335px;
     }
     .aboutBottom {
         margin: 20px auto;
@@ -423,7 +586,7 @@ footer .contact {
     .skillsList {
         display: flex;
         flex-direction: column;
-        margin: 20px 5%;
+        margin: 0px 5%;
     }
     .skills {
         grid-area: skills;
@@ -455,11 +618,15 @@ footer .contact {
         font-weight: 400; 
     }
 
+    .toolsList img {
+        margin: auto;
+        padding: 30px;
+    }
+
     h5 {
         font-size: 24px;
         font-weight: 400;
-        margin: auto;
-        justify-content: flex-start;
+        margin: 0 auto;
         color: #FFFFFF;
     }
     
@@ -472,8 +639,11 @@ footer .contact {
         font-size: 40px;
         margin-bottom: -10px;
         margin-top: 20px;
-        padding-left: 15%;
+        padding-left: 0%;
         text-shadow: 4px 4px 4px #2D2D2D;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
     }
     
     .sectionHeader::first-letter {
@@ -484,26 +654,24 @@ footer .contact {
     }
     footer {
         background-color: #2D2D2D;
-        margin: 0px -8px -8px -8px;
-        width: 600px;
         height: 250px;
         text-align: center;
         color: white;
     }
-    footer .flex {
+    footer .footer {
         display: flex;
         width: 360px;
+        margin: 0 auto;
         flex-direction: column;
         justify-content: center;
-        padding: 15px 0;
-        margin: 0 5%;
     }
     
     footer .contact {
         display: flex;
         align-items: center;
         justify-content: center;
-        padding-right: 16px;
+        padding-right: 50px;
+        margin: 0 auto;
     }
 
     #break::before {
@@ -512,9 +680,9 @@ footer .contact {
     }
     
     #copyright {
-        justify-content: baseline;
+        justify-content: center;
         width: 360px;
-        margin: 0 5%;
+        margin: -5px auto;
     }
 }
 

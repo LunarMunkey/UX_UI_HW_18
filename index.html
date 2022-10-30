@@ -9,23 +9,28 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Arizonia&family=Montserrat:wght@400;500;600;700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/644d5df2b2.js" crossorigin="anonymous"></script>
     <title>Anna Biernacki's Portfolio</title>
 </head>
 
 <body>
-    <header class="navBar">
-        <div class="flex logo">
-            <img src="./Images/Logox1crop.png" alt="logo">
+    <header>
+        <div class="container">
+            <nav class="navBar">
+                <img src="./Images/Logox1crop.png" alt="logo">
+                <button class="hamburger" id="hamburger">
+                    <i class="fa-solid fa-bars"></i>
+                    <i class="fa-solid fa-xmark"></i> 
+                </button>
+                <ul class="navUL showMenu" id="navUL">
+                    <li class="navItem" id="home">Home</li>
+                    <li class="navItem" id="projects">Projects</li>
+                    <li class="navItem" id="about">About</li>
+                    <li class="navItem">Resume</li>
+                </ul>
+            </nav>
         </div>
-        <nav class="flex">
-            <ul>
-                <li class="flex navItem">Home</li>
-                <li class="flex projectsList navItem">Projects</li>
-                <li class="flex navItem">About</li>
-                <li class="flex navItem">Resume</li>
-            </ul>
-        </nav>
     </header>
     <section class="hero">
         <div class="content">
@@ -51,15 +56,15 @@
                     <button class="view" id="lifeletters"><span class="brackets"> >> </span>View Case Study<span class="brackets"> << </span></button>
                 </div>
             </div>
-            <div class="caseStudy">
+            <div class="caseStudy" id="caseStudy2">
                 <div class="caseText">
                     <h3 class="study"><span class="brackets"> >> </span>MARS RESCUE<span class="brackets"> << </span></h3>
                     <p class="studyText">Group project working directly with a non-profit animal rescue to redesign their website and mobile.</p>
                     <button class="view" id="mars"><span class="brackets"> >> </span>View Case Study<span class="brackets"> << </span></button>
                 </div>
                 <div class="caseImage" id="marsImage">
-                    <img src="./Images/mars-laptop.png" alt="mars-laptop">
-                    <img src="./Images/mars-mobile.png" alt="mars-mobile">
+                    <img src="./Images/mars-laptop.png" alt="mars-laptop" id="mars-laptop">
+                    <img src="./Images/mars-mobile.png" alt="mars-mobile" id="mars-mobile">
                 </div>
             </div>
             <div class="caseStudy">
@@ -115,7 +120,7 @@
     </section>
     <h2 class="sectionHeader">CONTACT</h2>
     <footer>
-        <div class="flex">
+        <div class="footer">
             <h5><span class="brackets"> >> </span>ANNABIERNACKICVT<span id="break">@GMAIL.COM</span><span class="brackets"> << </span></h5>
             <div class="contact">
                 <a href="mailto:annabiernackicvt@gmail.com" class="icon" id="email"><img src="./Images/Email.png" alt="email"></a>
@@ -124,6 +129,7 @@
         </div>
         <p id="copyright">Copyright 2022</p>
     </footer>
+    <script src="./script.js"></script>
 </body>
 
 </html>
