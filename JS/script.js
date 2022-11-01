@@ -22,10 +22,6 @@ const home = document.querySelector(".hero");
 const projects = document.querySelector(".projects");
 const about = document.querySelector(".about");
 
-
-home.addEventListener("click").scrollIntoView({behavior: 'smooth'});
-projects.scrollIntoView({behavior: 'smooth'});
-
 //const hamburger = document.getElementById('hamburger');
 //const navUL = document.getElementById('navUL');
 
